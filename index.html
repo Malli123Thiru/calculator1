@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Calculator</title>
+      <style>
+        
+        body{
+            width: 100%;
+            height: 800px;
+            background-image: linear-gradient(rgb(113, 21, 104),black);
+        }
+        #container{
+                width: 370px;
+                height: 370px;
+                background-color:darkslategray;
+                position: absolute;
+                text-align: center;
+                align-items: center;
+                left: 40%;
+                top: 150px;
+                border-radius: 10px;
+                border: 3px 3px solid black;
+                box-shadow: 5px 5px 10px 10px black;
+            background-image: linear-gradient(rgb(113, 21, 104),rgb(16, 3, 3));
+
+        }
+        #display{
+            width: 98%;
+            height: 50px;
+            font-size: 30px;
+            border-radius: 10px;
+            background-color:  rgb(124, 82, 82);
+            background-image: linear-gradient(rgb(113, 21, 104),black);
+
+        }
+        .a{
+            width: 23%;
+            height: 40px;
+            border-radius: 10px;
+            border-color: 2px 2px solid black;
+            font-size: 30px;
+            box-shadow: 3px 3px 6px black;
+            background-image: linear-gradient(rgb(113, 21, 104),rgb(11, 3, 3));
+
+        }
+        .a:hover{
+            transition: all 5s;
+            background-image: linear-gradient(rgb(45, 160, 189),black);
+        }
+        .b{
+           width: 47%;
+           height: 40px;
+            font-size: 30px;
+            border-radius: 10px;
+            background-color: rgb(124, 82, 82);
+            box-shadow: 3px 3px 6px black;
+            background-image: linear-gradient(rgb(113, 21, 104),black);
+
+        }
+        .b:hover{
+            background-image: linear-gradient(rgb(45, 160, 189),black);
+        }
+        
+      </style>
+</head>
+<body>
+    <div id="container">
+        <form name="cal" placeholder="Calculator">
+            <input id="display" name="Answer">
+            <br><br>
+            <input class="a" type="button" value="1" onclick="cal.Answer.value+='1'">
+            <input class="a" type="button" value="2" onclick="cal.Answer.value+='2'">
+            <input class="a" type="button" value="3" onclick="cal.Answer.value+='3'">
+            <input class="a" type="button" value="+" onclick="cal.Answer.value+='+'">
+            <br><br>
+            <input class="a" type="button" value="4" onclick="cal.Answer.value+='4'">
+            <input class="a" type="button" value="5" onclick="cal.Answer.value+='5'">
+            <input class="a" type="button" value="6" onclick="cal.Answer.value+='6'">
+            <input class="a" type="button" value="-" onclick="cal.Answer.value+='-'">
+            <br><br>
+            <input class="a" type="button" value="7" onclick="cal.Answer.value+='7'">
+            <input class="a" type="button" value="8" onclick="cal.Answer.value+='8'">
+            <input class="a" type="button" value="9" onclick="cal.Answer.value+='9'">
+            <input class="a" type="button" value="*" onclick="cal.Answer.value+='*'">
+            <br><br>
+            <input class="a" type="button" value="/" onclick="cal.Answer.value+='/'">
+            <input class="a" type="button" value="0" onclick="cal.Answer.value+='0'">
+            <input class="a" type="button" value="." onclick="cal.Answer.value+='.'">
+            <input class="a" type="button" value="%" onclick="cal.Answer.value+='%'">
+            <br><br>
+            <input class="b" type="button" value="clear" onclick="cal.Answer.value=' '">
+            <input class="b" type="button" value="=" onclick="cal.Answer.value=eval(cal.Answer.value)">
+            <br><br>
+        </form>
+    </div>
+</body>
+</html>
